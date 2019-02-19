@@ -1,0 +1,22 @@
+doctype html
+head
+  title CRUD Board
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(href='/public/main.css', rel='stylesheet', type='text/css')
+body.container.text-center
+  a.big-font(href='/') &larr;
+  header
+    h1#boardTitle
+  main
+    section
+      label(for='newCard') Add:
+      form#newCard
+        input.submit(type='text', name='card', placeholder='New card...', maxlength='20')
+        input(type='submit', value='Submit')
+      #errorC.text-warning.fadeInOut
+    section
+      #displayBoards.card-container
+  footer
+    p Thanks for sticking around!
+  script(src='/public/boards.js')
