@@ -1,0 +1,24 @@
+doctype html
+head
+  title CRUD Main
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(href='/public/main.css', rel='stylesheet', type='text/css')
+body.container.text-center
+  header
+    h1 CRUD App
+  main
+    section
+      label(for='') Add:
+      form#newBoard
+        input(type='text', name='board', maxlength='20')
+        input(type='submit', value='Submit')
+      #error.text-warning.fadeInOut
+    section
+      label(for='display') Current Boards:
+      #display.card-container
+  footer.tooltip
+    p Thanks for checking out this app!
+    span#dropDiv.dropDiv(ondrop='drop(event)', ondragover='allowDrop(event)') &#x1F5D1;
+    span.tooltipText.text-center Drop a board over me to delete it!
+  script(src='/public/index.js')

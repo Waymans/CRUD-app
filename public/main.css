@@ -1,0 +1,340 @@
+/* Taken from my pre-made css file */
+
+body {
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+figure {
+  margin: 0; }
+
+/* Scaffolding
+  ============================================================================ */
+html {
+  font: normal normal normal 1rem sans-serif; }
+
+body {
+  color: #555;
+  background: #eee;
+  font-size: 1rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 1.5rem 0;
+  font-weight: 600;
+  font-family: sans-serif;
+  line-height: 1.2;
+  color: #555; }
+
+h1 {
+  font-size: 1.75rem; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h3 {
+  font-size: 1.25rem; }
+
+h4 {
+  font-size: 1.1rem; }
+
+h5 {
+  font-size: 1rem; }
+
+a {
+  color: #0366EE;
+  text-decoration: none; }
+a:hover, a:active, a:focus {
+  color: #E701FB; }
+
+.full-container {
+  max-width: 100%;
+  padding: 0 1rem; }
+
+.container {
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Helpers
+  ============================================================================= */
+.small-font {
+  font-size: .5rem; }
+
+.big-font {
+  font-size: 5rem; }
+
+.contain {
+  overflow: auto; }
+
+@media (min-width: 600px) {
+  .contain {
+    width: 100%; } } 
+  
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: block; }
+
+.clearfix:after {
+  clear: both; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
+.show {
+  display: block !important; }
+
+.hide {
+  display: none !important; }
+
+.invisible {
+  visibility: hidden; }
+
+.absolute {
+  position: absolute; }
+
+.relative {
+  position: relative; }
+
+.fixed {
+  position: fixed; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.text-success{
+  color: #0AC901; }
+.text-info{
+  color: #01BFC9; }
+.text-warning{
+  color: #FC9809; }
+.text-danger{
+  color: #EE2501; }
+.text-secondary{
+  color: #929292; }
+.text-dark{
+  color: #3C3C3B; }
+.text-hippy{
+  color: #E701FB; }
+.text-sunny{
+  color: #FEFA01; }
+
+.fadeInOut{
+  animation: fadeInOut 2s linear 0s infinite running;
+}
+@keyframes fadeInOut {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+/* Buttons
+  ==================================================================================== */
+.button, 
+a.button, 
+button, 
+[type=submit], 
+[type=reset], 
+[type=button] {
+  -webkit-appearance: none;
+  display: inline-block;
+  border: 1px solid #0366EE;
+  border-radius: 4px;
+  background: #0366EE;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: sans-serif;
+  font-size: 1rem;
+  text-transform: none;
+  padding: .75rem 1.25rem;
+  margin: 0 0 .5rem 0;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1; }
+
+.button:hover, 
+a.button:hover, 
+button:hover, 
+[type=submit]:hover, 
+[type=reset]:hover, 
+[type=button]:hover {
+  border: 1px solid #0250bc;
+  background: #0250bc;
+  color: #ffffff;
+  text-decoration: none; }
+
+.button:focus, 
+.button:active, 
+a.button:focus, 
+a.button:active, 
+button:focus, 
+button:active, 
+[type=submit]:focus, 
+[type=submit]:active, 
+[type=reset]:focus, 
+[type=reset]:active, 
+[type=button]:focus, 
+[type=button]:active {
+  border: 1px solid #0250bc;
+  background: #0250bc;
+  color: #ffffff;
+  text-decoration: none; }
+
+.button::-moz-focus-inner, 
+a.button::-moz-focus-inner, 
+button::-moz-focus-inner, 
+[type=submit]::-moz-focus-inner, 
+[type=reset]::-moz-focus-inner, 
+[type=button]::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+
+/* Forms
+  ============================================================================= */
+
+[type=text] {
+  /*display: block;*/
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: .75rem;
+  outline: none;
+  background: transparent;
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  line-height: 1; }
+ 
+[type=text]:hover {
+  border: 1px solid #999; }
+ 
+[type=text]:focus, 
+[type=text]:active {
+  border: 1px solid #0150FE;
+  box-shadow: 1px 1px 5px steelblue; }
+
+label {
+  font-weight: 600;
+  max-width: 100%;
+  display: block;
+  margin: 1rem 0 .5rem; }
+
+@media (min-width: 600px) {
+  .split-form label {
+    text-align: right;
+    padding: 0 .5rem;
+    margin-bottom: 1rem; } }
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+.dropDiv {
+  font-size: 9rem;
+  line-height: 10rem;
+  margin: 0 1rem; }
+
+/* cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; }
+.card {
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem 1rem;
+  background: #eee;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .2);
+  border-radius: .2rem;
+  overflow: hidden;
+  transition: all .2s linear; }
+.card:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .25);
+  transform: translate3D(0, -.5rem, 0); }
+@media screen and (min-width: 200px) {
+  .card {
+    flex: 1 1 calc(100% - 2rem); } }
+@media screen and (min-width: 600px) {
+  .card {
+    flex: 1 1 calc(50% - 2rem); } }
+@media screen and (min-width: 800px) {
+  .card {
+    flex: 1 1 calc(33% - 2rem); } }
+@media screen and (min-width: 1000px) {
+  .card {
+    flex: 1 1 calc(33% - 2rem); } }
+
+/* tooltip */
+.tooltip {
+  position: relative; }
+.tooltipText {
+  font-size: 1rem;
+  opacity: 0;
+  background: #555;
+  color: #fff;
+  border-radius: .2rem;
+  padding: .2rem;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transition-duration: .5s;
+}
+.tooltip:hover .tooltipText {
+  opacity: 1;
+}
+@media screen and (max-width: 400px) {
+  .tooltipText {
+    top: 25%; } }
+
+/* extra */
+
+.scale { 
+  transition: all .2s linear; }
+.scale:hover { 
+  transform: scale(1.01); }
+
+.inline {
+  display: inline;
+  overflow: auto;
+  max-height: 10rem;
+}
+
+.times {
+  color: #555;
+  font-size: 1rem;
+}
+.times:hover {
+  cursor: pointer;
+}
+.text {
+  font-size: 1rem;
+  font-weight: 100;
+}
